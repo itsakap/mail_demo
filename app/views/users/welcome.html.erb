@@ -1,0 +1,12 @@
+<p id = "notice"><%= notice %></p>
+<h1>Welcome!</h1>
+
+<h2>Our current user has...</h2>
+
+<% if current_user %>
+  <p><%= "a username of #{current_user.username}" %></p>
+<% else %>
+  <p>not logged in... <%= link_to 'change that', new_auth_path %></p>
+<% end %>
+
+<p><%= current_user ? (link_to 'Sign Out', auths_path, {method: :delete}) : (link_to 'Need to make an account?', new_user_path) %></p>

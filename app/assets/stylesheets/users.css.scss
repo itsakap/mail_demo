@@ -1,0 +1,35 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  text-align: center;
+}
+.field:nth-child(odd){
+  background:yellow;
+}
+.field:nth-child(even){
+  background:orange;
+}
+.field{
+  padding:1em;
+  width:500px;
+  margin:0 auto;
+}
+.field label{
+  float:left;
+}
+.field input{
+  float: right;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+.submit{
+  margin:1em;
+}

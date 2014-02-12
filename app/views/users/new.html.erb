@@ -1,0 +1,22 @@
+<p id = "notice"><%= notice %></p>
+<h1>New User</h1>
+
+<%= form_for @user do |f| %>
+  <div class = "field cf">
+    <%= f.label :post, "Username" %>
+    <%= f.text_field :username %>
+  </div>
+  <div class = "field cf">
+    <%= f.label :post, "E-Mail Address" %>
+    <%= f.email_field :email %>
+  </div>
+  <div class = "field cf">
+    <%= f.label "Password" %>
+    <%= f.password_field :password %>
+  </div>
+  <div class = "field cf">
+    <%= f.label :post, "Confirm Password" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <%= f.submit "Sign Up", {class: 'submit'} %>
+<% end %>
